@@ -1,9 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './MyNav.css';
 
 function MyNav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="src/assets/logo.svg" style={{width: 70, borderRadius: 30}} alt="logo" />
             <a className="navbar-brand p-2" href="#">Books React</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

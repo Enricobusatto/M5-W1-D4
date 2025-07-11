@@ -1,0 +1,8 @@
+.navbar{
+    background-color: #F5E7DE!important;
+}
+.navbar-brand.p-2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
