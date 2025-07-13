@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import './Welcome.css'
+import Alert from 'react-bootstrap/Alert';
+import './Welcome.css';
+
 
 function Welcome() {
-
   return (
-    <>
-        <h1 className='mt-5'>Books React</h1>
-        <p>Welcome to the Books React application!</p>
-        <p>This is a simple app to manage your book collection.</p>
-        <p>Enjoy your reading journey!</p>
-    </>
-  )
+    <Alert variant="success" id='welcome-alert'>
+      <Alert.Heading>Hey, nice to see you, Welcome to the Books React application!</Alert.Heading>
+      <p>
+        This is a simple app to manage your book collection.
+      </p>
+      <hr />
+      <p className="mb-0">
+        Enjoy your reading journey!
+      </p>
+    </Alert>
+  );
 }
 
-export default Welcome
+export default Welcome;

@@ -1,4 +1,3 @@
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fantasy from './assets/fantasy.json';
 import './AllTheBooks.css';
