@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client'
-import Welcome from './Welcome.jsx'
-import MyNav from './Mynav.jsx'
-import MyFooter from './MyFooter.jsx'
-import AllTheBooks from './AllTheBooks.jsx'
+import MyNav from './components/MyNav.jsx'
+import Welcome from './components/Welcome.jsx'
+import AllTheBooks from './components/AllTheBooks.jsx'
+import MyFooter from './components/MyFooter.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
