@@ -2,17 +2,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './singlebook.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useState } from 'react';
 
 
 
 function SingleBook({ book }) {
+    const [selected, setSelected] = useState(false)
     return (
         <Card
             className="card-hover shadow d-flex flex-column"
             style={{ width: '100%', height: '100%', border: '0' }}
         >
-            <Card.Img
+            <Card.Img onClick={() => setSelected(!selected)}
                 variant="top"
+                className={selected && 'border border-5 border-danger'}
                 src={book.img}
                 style={{ height: '300px', objectFit: 'cover' }}
             />
