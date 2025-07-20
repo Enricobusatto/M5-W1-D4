@@ -12,7 +12,7 @@ import scifi from '../assets/scifi.json';
 // Unione di tutti i libri in un unico array
 const allBooksRaw = [...fantasy, ...history, ...horror, ...romance, ...scifi]; //idea iniziale era di pescare i file dalla cartella madre così che ogni file aggiunto non dovessi modificare il codic
 const allBooks = Array.from(new Map(allBooksRaw.map(book => [book.asin, book])).values()); // Rimuove i duplicati basati su 'asin' CHIEDERE AL PROF
-    console.log ("Tutti i libri:", allBooks);
+    // console.log ("Tutti i libri:", allBooks);
 
 
 function AllTheBooks() {

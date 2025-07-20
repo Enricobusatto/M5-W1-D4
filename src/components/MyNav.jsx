@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './MyNav.css';
+import './css.components/myNav.css';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../assets/logo.svg';
 
