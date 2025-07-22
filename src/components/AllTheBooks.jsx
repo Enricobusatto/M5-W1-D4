@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import SingleBook from './SingleBook.jsx';
+import './css.components/AllTheBooks.css'
 
 import fantasy from '../assets/fantasy.json';
 import history from '../assets/history.json';
@@ -48,6 +49,7 @@ function AllTheBooks() {
     // }
 
   return (
+    // Filtro ricerca
     <Container className="mt-4 mb-4">
       <Form.Select
         className="mb-3"
@@ -70,10 +72,10 @@ function AllTheBooks() {
         value={searchTitle}
         onChange={(e) => setSearchTitle(e.target.value)}
       />
-
+{/* layout griglia */}
       <Row>
         {filteredBooks.map((book) => (
-          <Col key={book.asin} xs={12} sm={6} md={4} lg={3} className="mb-4">
+          <Col key={book.asin} xs={12} sm={6} md={4} lg={4} className="mb-4">
             <SingleBook book={book} />
           </Col>
         ))}

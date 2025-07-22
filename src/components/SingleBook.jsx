@@ -11,7 +11,7 @@ function SingleBook({ book }) {
     const [selected, setSelected] = useState(false)
     return (
         <Card
-            className="card-hover shadow d-flex flex-column"
+            className="card-hover shadow d-flex flex-column "
             style={{ width: '100%', height: '100%', border: '0' }}
         >
             <Card.Img onClick={() => setSelected(!selected)}

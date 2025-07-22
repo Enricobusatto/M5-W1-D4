@@ -2,11 +2,13 @@
   margin: 0 auto;
   text-align: center;
 }
+
 #welcome-alert {
   max-width: 30%;
   margin: 0 auto;
-  margin-top : 20px;
+  margin-top: 20px;
 }
-.btn {
+
+.bg-info .mt-3 .border-0 {
   background-color: aliceblue
 }
