@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css.components/myNav.css';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Form } from 'react-bootstrap';
 import logo from '../assets/logo.svg';
 
-function MyNav() {
+function MyNav({selectedCategory, setSearchTitle, setSelectedCategory, categories, searchTitle}) {
     return (
         <Navbar expand="lg" bg="light" variant="light">
             <Container>
@@ -22,6 +22,28 @@ function MyNav() {
                         <Nav.Link href="#">About</Nav.Link>
                         <Nav.Link href="#">Browser</Nav.Link>
                     </Nav>
+                        {/* Filtro ricerca */}
+                        <Form.Select
+                            className="mb-3"
+                            aria-label="Select category"
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                        >
+                            <option value="">All Categories</option>
+                            {categories.map((cat) => (
+                                <option key={cat} value={cat}>
+                                    {cat}
+                                </option>
+                            ))}
+                        </Form.Select>
+
+                        <Form.Control
+                            className="mb-4"
+                            type="text"
+                            placeholder="Search your book..."
+                            value={searchTitle}
+                            onChange={(e) => setSearchTitle(e.target.value)}
+                        />
                 </Navbar.Collapse>
             </Container>
         </Navbar>
