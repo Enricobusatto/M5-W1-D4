@@ -1,12 +1,13 @@
-import { useState } from 'react';
 import Pagination from 'react-bootstrap/Pagination';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Pages({active, pages , setActive}) {
 
     let items = [];
     for (let number = 1; number <= pages; number++) {
         items.push(
-            <Pagination.Item key={number} active={number == active} onClick={() => handlePage(number)}>
+            <Pagination.Item className='mt-4' key={number} active={number == active} onClick={() => handlePage(number)}>
                 {number}
             </Pagination.Item>,
         );

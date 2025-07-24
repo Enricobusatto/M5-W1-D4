@@ -6,3 +6,10 @@
     font-weight: bold;
     color: #333;
 }
+.selectCategory, .searchInput{
+    width: 300px;
+}
+.searchInput{
+    margin-left: 5px;
+    margin-right:10px;
+};

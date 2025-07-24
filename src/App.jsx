@@ -9,6 +9,7 @@ import horror from './assets/horror.json';
 import romance from './assets/romance.json';
 import scifi from './assets/scifi.json';
 import { useState } from 'react';
+import ThemeContext from './components/ThemeContext.jsx';
 
 
 

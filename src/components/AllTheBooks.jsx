@@ -22,11 +22,10 @@ function AllTheBooks({ filteredBooks, searchTitle, selectedCategory}) {
   return (
 
     <Container>
-      <Pages pages={pagesNumber} active={active} setActive={setActive} />
       {/* layout griglia */}
       <Row>
         {booksForPage.map((book) => (
-          <Col key={book.asin} xs={12} sm={6} md={4} lg={4} className="mb-4">
+          <Col key={book.asin} xs={12} sm={6} md={4} lg={3} className="mb-4 mt-5">
             <SingleBook book={book} />
           </Col>
         ))}
@@ -39,6 +38,7 @@ function AllTheBooks({ filteredBooks, searchTitle, selectedCategory}) {
           {searchTitle && ` con il titolo che contiene "${searchTitle}"`}
         </div>
       )}
+      <Pages pages={pagesNumber} active={active} setActive={setActive} />
     </Container>
   );
 }

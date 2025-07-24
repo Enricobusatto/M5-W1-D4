@@ -30,7 +30,7 @@ function AddComment({ show, handleClose, handleSubmit }) {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3 align-items-center">
             <Form.Label>Valutazione</Form.Label>
             <Form.Select value={rating} onChange={(e) => setRating(Number(e.target.value))}>
               {[1, 2, 3, 4, 5].map((num) => (
