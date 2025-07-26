@@ -9,12 +9,13 @@ import horror from './assets/horror.json';
 import romance from './assets/romance.json';
 import scifi from './assets/scifi.json';
 import { useState } from 'react';
-import ThemeContext from './components/ThemeContext.jsx';
+import { ThemeProvider } from './components/ContextComponents/ThemeContext.jsx';
+import './components/css.components/App.css';
 
 
 
 // Unione di tutti i libri in un unico array
-const allBooksRaw = [...fantasy, ...history, ...horror, ...romance, ...scifi]; //idea iniziale era di pescare i file dalla cartella madre così che ogni file aggiunto non dovessi modificare il codic
+const allBooksRaw = [...fantasy, ...history, ...horror, ...romance, ...scifi];
 const allBooks = Array.from(new Map(allBooksRaw.map(book => [book.asin, book])).values());
 // constante che contiene le categorie uniche
 const categories = [...new Set(allBooks.map(book => book.category))];
@@ -23,8 +24,8 @@ function App() {
     // console.log ("Tutti i libri:", allBooks);
     const [searchTitle, setSearchTitle] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
-    
-    
+
+
     // Filtro  per titolo e categoria
     const filteredBooks = allBooks.filter(book => {
         const categoryMatch = selectedCategory ? book.category === selectedCategory : true;
@@ -35,12 +36,12 @@ function App() {
     });
     return (
         // <StrictMode>
-        <>
+        <ThemeProvider>
             <MyNav setSearchTitle={setSearchTitle} setSelectedCategory={setSelectedCategory} categories={categories} searchTitle={searchTitle} selectedCategory={selectedCategory} />
             <Welcome />
-            <AllTheBooks filteredBooks={filteredBooks} searchTitle={searchTitle} selectedCategory={selectedCategory}/>
+            <AllTheBooks filteredBooks={filteredBooks} searchTitle={searchTitle} selectedCategory={selectedCategory} />
             <MyFooter />
-        </>
+        </ThemeProvider>
 
         // </StrictMode>,
     )

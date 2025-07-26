@@ -14,7 +14,10 @@ function Pages({active, pages , setActive}) {
     }
 
     function handlePage(newPage) {
-        window.location.search = `?page=${newPage}`;
+        // window.location.search = `?page=${newPage}`;
+        const url = new URL(window.location);
+        url.searchParams.set('page', newPage);
+        window.history.pushState({}, '', url);
         setActive(newPage);
 
     }
